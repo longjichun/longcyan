@@ -1,7 +1,7 @@
-git is a version control system
+ï»¿git is a version control system
 Git is free software
 ###
 
 ## 0 git remote add origin git@github.com:longjichun/longgreen.git
-## 1 Ìá½»Ê±ĞèÒªÏÈÀ­È¡£¨pull£© git pull origin master
+## 1 æäº¤æ—¶éœ€è¦å…ˆæ‹‰å–ï¼ˆpullï¼‰ git pull origin master
 ## 2 git push -u origin master
