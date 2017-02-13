@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>on-off</title>
+	<style>
+		body{
+			background: #ccc;
+			margin: 0;
+			padding: 0;
+		}
+		div.wrap{
+			margin: 30px auto;
+			border-radius: 10px;
+			width:120px;
+			height: 120px;
+			border:1px solid #ccc;
+			background: #f1f1f1;
+		}
+		.animate{
+			-webkit-transition: all .5s ease;
+		}
+		#switch{
+			margin: 45px auto;
+			background: #f90;
+			border-radius: 5px;
+			width: 80px;
+			height: 30px;
+			position: relative;
+
+		}
+		#switch span{
+			display: block;
+			line-height: 30px;
+			padding: 0 8px;
+			font-weight: bold;
+			color: #fff;
+		}
+		.mask{
+			left: 0px;
+			top:-2px;
+			height: 34px;
+			width: 40px;
+			border-radius: 5px;
+			position: absolute;
+			background: #eee;
+			box-shadow: 0 0 3px;
+			-webkit-transition: all .5s ease;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div id="switch" class="animate">
+			<span>OFF&nbsp;ON</span>
+			<div class="mask animate"></div>
+		</div>
+	</div>
+	<script>
+		var mask = document.getElementsByClassName("mask")[0];
+		var isOn = false;
+		var sw = document.getElementById("switch")
+		mask.onclick = function(){
+			if( isOn ) {
+				sw.style.backgroundColor = "#f90";
+				mask.style.left = "0px";
+			} else {
+				sw.style.backgroundColor = "#666";
+				mask.style.left = "40px";
+			}
+			isOn = !isOn;
+		}
+	</script>
+</body>
+</html>
